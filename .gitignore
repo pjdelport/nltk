@@ -1,4 +1,15 @@
+# Python bytecode
 *.pyc
 *.pyo
-.tox
 
+# distribute / setuptools
+/*.egg
+/*.egg-info/
+/build/
+/dist/
+
+# Sphinx
+/web/_build/
+
+# Tox envdir
+/.tox/
