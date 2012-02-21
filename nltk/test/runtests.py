@@ -33,7 +33,12 @@ DEPENDENT_TESTS = [
     "nonmonotonic.doctest",
 ]
 
-EXCLUDED_TESTS = FAILING_TESTS + DEPENDENT_TESTS
+# These are not actually tests, but get accidentally matched by Nose.
+NON_TESTS = [
+    'extract_test_sentences',
+]
+
+EXCLUDED_TESTS = FAILING_TESTS + DEPENDENT_TESTS + NON_TESTS
 _EXCLUDE_ARGV = ['--exclude='+test for test in EXCLUDED_TESTS]
 
 if __name__ == '__main__':
